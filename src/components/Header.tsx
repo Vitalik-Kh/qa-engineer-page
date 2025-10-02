@@ -17,7 +17,6 @@ const Header: React.FC = () => {
   const navItems = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#experience' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -37,9 +36,14 @@ const Header: React.FC = () => {
         <div className="container-max-width">
           <div className="flex items-center justify-between h-16">
             <div className="flex-shrink-0">
-              <span className="text-xl font-bold gradient-text">
-                Vitalii Khymynets
-              </span>
+              {scrolled && (
+                <a 
+                  href="#"
+                  className="text-xl font-bold text-gray-900 animate-fade-in hover:text-primary-600 transition-colors duration-200"
+                >
+                  Vitalii Khymynets
+                </a>
+              )}
             </div>
             
             {/* Desktop Navigation */}

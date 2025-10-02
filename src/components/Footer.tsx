@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             <div>
               <h3 className="text-xl font-bold mb-4">Vitalii Khymynets</h3>
               <p className="text-gray-300 mb-4">
-                Senior QA Engineer with 5+ years of experience in test automation, 
+                Senior QA Engineer with nearly 5 years of experience in test automation, 
                 manual testing, and quality assurance.
               </p>
               <div className="flex space-x-4">
@@ -34,15 +34,6 @@ const Footer: React.FC = () => {
                 >
                   <Mail size={20} />
                 </a>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label="GitHub"
-                >
-                  <Github size={20} />
-                </a>
               </div>
             </div>
 
@@ -58,11 +49,6 @@ const Footer: React.FC = () => {
                 <li>
                   <a href="#skills" className="text-gray-300 hover:text-white transition-colors">
                     Skills
-                  </a>
-                </li>
-                <li>
-                  <a href="#experience" className="text-gray-300 hover:text-white transition-colors">
-                    Experience
                   </a>
                 </li>
                 <li>
@@ -82,12 +68,6 @@ const Footer: React.FC = () => {
                 <p>{contact.location}</p>
               </div>
             </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400 flex items-center justify-center">
-              Made with <Heart className="w-4 h-4 text-red-500 mx-1" /> by Vitalii Khymynets © {currentYear}
-            </p>
           </div>
         </div>
       </div>

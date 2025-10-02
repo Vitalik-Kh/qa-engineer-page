@@ -1,18 +1,42 @@
-import { Code, Database, Shield, Zap, GitBranch, Users } from 'lucide-react';
 import { cvData } from '../data/cvData';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { 
+  Code, Database, Shield, Zap, GitBranch, Users, 
+  Search, Target, CheckCircle, Bug, TestTube, 
+  Cloud, Terminal, FileText, Settings, Clock
+} from 'lucide-react';
+import PlaywrightLogo from '../assets/playwright-logo.svg';
+import TypeScriptLogo from '../assets/Typescript_logo.png';
+import JavaScriptLogo from '../assets/JavaScript-logo.png';
+import WebdriverIOLogo from '../assets/logo-webdriver-io-logo.png';
+import DynamoDBLogo from '../assets/DynamoDB.png';
+import AWSLogo from '../assets/Amazon_Web_Services_Logo.svg.png';
+import PostmanLogo from '../assets/postman-sq.png';
+import GitLogo from '../assets/git-icon.png';
+import DockerLogo from '../assets/docker-logo.svg';
+import JiraLogo from '../assets/jira-logo.svg';
+import BitbucketLogo from '../assets/bitbucket-icon.svg';
+import CursorLogo from '../assets/cursor-logo.png';
 
 const Skills: React.FC = () => {
-  const { skills } = cvData;
+  const sectionRef = useScrollAnimation();
 
-  const skillIcons: Record<string, React.ReactNode> = {
-    'Test Automation': <Code className="w-6 h-6" />,
-    'Manual Testing': <Shield className="w-6 h-6" />,
-    'Database Testing & Cloud': <Database className="w-6 h-6" />,
-    'API Testing': <Zap className="w-6 h-6" />,
-    'Performance & Security Testing': <Shield className="w-6 h-6" />,
-    'CI/CD & Tools': <GitBranch className="w-6 h-6" />,
-    'Methodologies': <Users className="w-6 h-6" />
-  };
+  // Most valuable skills to display as badges with icons
+  const valuableSkills = [
+    // Skills with official logos
+    { name: 'Playwright', icon: <img src={PlaywrightLogo} alt="Playwright" className="w-12 h-12" /> },
+    { name: 'TypeScript', icon: <img src={TypeScriptLogo} alt="TypeScript" className="w-12 h-12" /> },
+    { name: 'JavaScript', icon: <img src={JavaScriptLogo} alt="JavaScript" className="w-12 h-12" /> },
+    { name: 'WebdriverIO', icon: <img src={WebdriverIOLogo} alt="WebdriverIO" className="w-12 h-12" /> },
+    { name: 'SQL', icon: <Database className="w-12 h-12" /> },
+    { name: 'AWS', icon: <img src={AWSLogo} alt="AWS" className="w-12 h-12 object-contain" /> },
+    { name: 'Postman', icon: <img src={PostmanLogo} alt="Postman" className="w-12 h-12" /> },
+    { name: 'Git', icon: <img src={GitLogo} alt="Git" className="w-12 h-12" /> },
+    { name: 'Docker', icon: <img src={DockerLogo} alt="Docker" className="w-12 h-12" /> },
+    { name: 'Jira', icon: <img src={JiraLogo} alt="Jira" className="w-12 h-12" /> },
+    { name: 'Bitbucket', icon: <img src={BitbucketLogo} alt="Bitbucket" className="w-12 h-12" /> },
+    { name: 'Cursor', icon: <img src={CursorLogo} alt="Cursor" className="w-12 h-12" /> }
+  ];
 
   return (
     <section id="skills" className="py-16 bg-white">
@@ -20,38 +44,18 @@ const Skills: React.FC = () => {
         <div className="container-max-width">
           <div className="text-center mb-12">
             <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-              Skills & Expertise
+              Tools & Technologies
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {skills.map((skill, index) => (
+          <div ref={sectionRef} className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 scroll-animate">
+            {valuableSkills.map((skill, index) => (
               <div 
                 key={index}
-                className="bg-gray-50 rounded-xl p-6 shadow-lg border border-gray-100"
+                className="text-primary-600 px-4 py-6 text-sm font-medium text-center hover:text-primary-700 transition-colors duration-200 flex flex-col items-center justify-center gap-3"
               >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
-                    <div className="text-primary-600">
-                      {skillIcons[skill.category] || <Code className="w-6 h-6" />}
-                    </div>
-                  </div>
-                  <h3 className="text-base font-semibold text-gray-900">
-                    {skill.category}
-                  </h3>
-                </div>
-                
-                <div className="space-y-2">
-                  {skill.items.map((item, itemIndex) => (
-                    <div 
-                      key={itemIndex}
-                      className="flex items-center text-sm text-gray-600"
-                    >
-                      <div className="w-2 h-2 bg-primary-400 rounded-full mr-3 flex-shrink-0"></div>
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
+                {skill.icon}
+                <span>{skill.name}</span>
               </div>
             ))}
           </div>

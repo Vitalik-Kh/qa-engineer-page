@@ -1,4 +1,4 @@
-import { Download, Mail, Phone, MapPin, Linkedin } from 'lucide-react';
+import { Download, Mail, Phone, MapPin, Linkedin, TrendingUp } from 'lucide-react';
 import { cvData } from '../data/cvData';
 
 const Hero: React.FC = () => {
@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
             {/* Left Column - Content */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <p className="text-base text-gray-600">Hello I'm</p>
+                <p className="text-base text-gray-600">Hi I'm</p>
                 <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">
                   {contact.name}
                 </h1>
@@ -54,24 +54,20 @@ const Hero: React.FC = () => {
 
               {/* CTA Button */}
               <div className="pt-4">
-                <a
-                  href="/cv/Vitalii_Khymynets_Senior_QA_Engineer_CV.md"
-                  download
-                  className="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-primary-700 transition-colors duration-200"
-                >
+                  <a
+                    href="/cv/Vitalii_Khymynets_Senior_QA_Engineer_CV.md"
+                    download
+                    className="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-medium rounded-lg hover:bg-gray-900 transition-colors duration-200"
+                  >
                   <Download size={20} className="mr-2" />
                   Download CV
                 </a>
               </div>
             </div>
 
-            {/* Right Column - Profile Image Placeholder */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="w-80 h-80 bg-gradient-to-br from-primary-100 to-primary-200 rounded-full flex items-center justify-center">
-                <div className="w-64 h-64 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center">
-                  <span className="text-6xl font-bold text-white">VK</span>
-                </div>
-              </div>
+            {/* Right Column - Background Icon */}
+            <div className="relative hidden md:flex justify-center">
+              <TrendingUp className="w-[300px] h-[300px] text-primary-600 opacity-10" />
             </div>
           </div>
         </div>
