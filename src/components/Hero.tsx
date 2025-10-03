@@ -20,8 +20,8 @@ const Hero: React.FC = () => {
                   Senior QA Engineer
                 </h2>
                 <p className="text-base text-gray-600">
-                  I'm a passionate QA Engineer with nearly 5 years of experience in test automation, manual testing, and quality assurance. 
-                  I love building robust testing solutions and fostering a culture of built-in quality.
+                  I'm a passionate QA Engineer specializing in test automation, manual testing, and leveraging AI to build smarter testing solutions. 
+                  I love fostering a culture of built-in quality and continuous improvement.
                 </p>
               </div>
 

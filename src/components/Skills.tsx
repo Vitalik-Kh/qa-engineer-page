@@ -13,7 +13,7 @@ import BitbucketLogo from '../assets/bitbucket-icon.svg';
 import CursorLogo from '../assets/cursor-logo.png';
 
 const Skills: React.FC = () => {
-  const sectionRef = useScrollAnimation();
+  const sectionRef = useScrollAnimation(0.1, 200);
 
   // Most valuable skills to display as badges with icons
   const valuableSkills = [

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-export const useScrollAnimation = (threshold = 0.1, delay = 0): React.RefObject<HTMLDivElement> => {
+export const useScrollAnimation = (threshold = 0.1, delay = 200): React.RefObject<HTMLDivElement> => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

@@ -5,7 +5,7 @@ import { useScrollAnimation } from '../hooks/useScrollAnimation';
 const About: React.FC = () => {
   const { summary } = cvData;
   const sectionRef = useScrollAnimation();
-  const carouselRef = useScrollAnimation(0.1, 600);
+  const carouselRef = useScrollAnimation();
 
   // Skill categories for static display
   const skillCategories = [

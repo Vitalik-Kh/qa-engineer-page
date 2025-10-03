@@ -29,7 +29,5 @@ export interface CVData {
   contact: ContactInfo;
   summary: string;
   skills: Skill[];
-  education: Education[];
-  experience: Experience[];
 }
 
