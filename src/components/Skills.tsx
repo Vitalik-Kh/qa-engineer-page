@@ -1,15 +1,9 @@
-import { cvData } from '../data/cvData';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { 
-  Code, Database, Shield, Zap, GitBranch, Users, 
-  Search, Target, CheckCircle, Bug, TestTube, 
-  Cloud, Terminal, FileText, Settings, Clock
-} from 'lucide-react';
+import { Database } from 'lucide-react';
 import PlaywrightLogo from '../assets/playwright-logo.svg';
 import TypeScriptLogo from '../assets/Typescript_logo.png';
 import JavaScriptLogo from '../assets/JavaScript-logo.png';
 import WebdriverIOLogo from '../assets/logo-webdriver-io-logo.png';
-import DynamoDBLogo from '../assets/DynamoDB.png';
 import AWSLogo from '../assets/Amazon_Web_Services_Logo.svg.png';
 import PostmanLogo from '../assets/postman-sq.png';
 import GitLogo from '../assets/git-icon.png';

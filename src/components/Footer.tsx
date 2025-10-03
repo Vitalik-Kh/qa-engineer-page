@@ -1,9 +1,8 @@
-import { Heart, Github, Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Mail } from 'lucide-react';
 import { cvData } from '../data/cvData';
 
 const Footer: React.FC = () => {
   const { contact } = cvData;
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-white">

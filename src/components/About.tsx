@@ -1,5 +1,5 @@
 import { cvData } from '../data/cvData';
-import { User, Code, Database, Shield, Zap, GitBranch, Users, Search, Target, CheckCircle, FileText, Clock, Settings } from 'lucide-react';
+import { User, Code, Database, Shield, Zap, GitBranch, Target, CheckCircle, Settings } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const About: React.FC = () => {

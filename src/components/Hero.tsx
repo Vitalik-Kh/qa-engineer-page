@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
             {/* Left Column - Content */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <p className="text-base text-gray-600">Hi I'm</p>
+                <p className="text-base text-gray-600">Hi I&apos;m</p>
                 <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">
                   {contact.name}
                 </h1>
@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
                   Senior QA Engineer
                 </h2>
                 <p className="text-base text-gray-600">
-                  I'm a passionate QA Engineer with nearly 5 years of experience in test automation, manual testing, and quality assurance. 
+                  I&apos;m a passionate QA Engineer with nearly 5 years of experience in test automation, manual testing, and quality assurance. 
                   I love building robust testing solutions and fostering a culture of built-in quality.
                 </p>
               </div>

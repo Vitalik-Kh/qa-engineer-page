@@ -1,10 +1,9 @@
-import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 import { cvData } from '../data/cvData';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const Contact: React.FC = () => {
   const { contact } = cvData;
-  const sectionRef = useScrollAnimation();
   const cardRef = useScrollAnimation(0.1, 300);
 
   return (
@@ -13,7 +12,7 @@ const Contact: React.FC = () => {
         <div className="container-max-width">
           <div className="text-center mb-12">
             <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-              Let's Connect
+              Let&apos;s Connect
             </h2>
           </div>
 
@@ -22,7 +21,7 @@ const Contact: React.FC = () => {
             <div className="text-center mb-16">
               <div ref={cardRef} className="scroll-animate">
                 <p className="text-sm text-gray-500 mb-6 max-w-2xl mx-auto">
-                  I'm always interested in new opportunities and collaborations. 
+                  I&apos;m always interested in new opportunities and collaborations. 
                   Feel free to reach out via LinkedIn or email.
                 </p>
                 <a
