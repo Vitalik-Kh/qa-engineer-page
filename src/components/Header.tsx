@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -45,8 +45,7 @@ const Header: React.FC = () => {
                 </a>
               )}
             </div>
-            
-            {/* Desktop Navigation */}
+
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 {navItems.map((item) => (
@@ -61,7 +60,6 @@ const Header: React.FC = () => {
               </div>
             </div>
 
-            {/* Mobile menu button */}
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -74,7 +72,6 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-200">
             <div className="px-2 pt-2 pb-3 space-y-1">
