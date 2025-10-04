@@ -1,3 +1,4 @@
+import { Heart } from 'lucide-react';
 import { contacts } from '../data/contacts';
 
 const Footer = () => {
@@ -48,6 +49,15 @@ const Footer = () => {
                 <p>{contacts.location}</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-gray-800">
+        <div className="section-padding py-6">
+          <div className="container-max-width">
+            <p className="text-center text-gray-400 text-sm flex items-center justify-center gap-2">
+              Built with <Heart className="w-4 h-4 text-red-500 fill-red-500" aria-label="love" /> and AI by Vitalii Khymynets
+            </p>
           </div>
         </div>
       </div>
